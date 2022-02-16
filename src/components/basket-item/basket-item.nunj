@@ -13,7 +13,7 @@
                     </button>
                     <input class="count__input js-count-input" pattern=" 0+\.[0-9]*[1-9][0-9]*$" type="number" value="{{ props.count }}">
                     <button class="count__btn js-count-btn" data-type="increase" type="button" title="Increase">
-                        <svg class="count__icon">
+                        <svg>
                             <use xlink:href="#icon-plus" />
                         </svg>
                     </button>
