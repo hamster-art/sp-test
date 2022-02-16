@@ -125,6 +125,9 @@ class ProjectApp {
 				countInputs.forEach(input => {
 					input.removeEventListener('change', countCost);
 				});
+				deleteBtns.forEach(btn => {
+					btn.removeEventListener('click', deleteItem);
+				});
 			});
 		}
 	}
