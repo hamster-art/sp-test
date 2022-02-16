@@ -1,0 +1,10 @@
+{% macro iconLink(props) %}
+    <a href="{{ props.link }}" class="icon-link{% if props.className %} {{ props.className }}{% endif %}">
+        <svg class="icon-link__svg">
+            <use xlink:href="#icon-{{ props.iconName }}" />
+        </svg>
+        {% if props.hasBadge %}
+            <span class="icon-link__badge">{{ props.badgeNum }}</span>
+        {% endif %}
+    </a>
+{% endmacro %}

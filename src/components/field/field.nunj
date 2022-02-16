@@ -1,0 +1,9 @@
+{% macro field(props) %}
+    <div class="field {% if props.className %} {{ props.className }}{% endif %}">
+        {% if props.lbl %}
+            <label class="field__lbl">{{ props.lbl }}</label>
+        {% endif %}
+        <input class="field__input" type="{{ props.type }}"
+               {% if props.placeholder %}placeholder="{{ props.placeholder }}"{% endif %}>
+    </div>
+{% endmacro %}

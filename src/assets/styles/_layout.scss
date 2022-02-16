@@ -1,0 +1,16 @@
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.container {
+	margin: auto;
+	padding-left: convertToRem(30);
+	padding-right: convertToRem(30);
+}

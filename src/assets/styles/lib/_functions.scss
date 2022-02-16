@@ -1,0 +1,7 @@
+@use 'sass:math';
+
+@function convertToRem($size) {
+	$val-rem: math.div($size, $base);
+
+	@return $val-rem * 1rem;
+}

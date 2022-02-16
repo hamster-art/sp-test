@@ -1,0 +1,84 @@
+.basket {
+	display: flex;
+	height: 100%;
+}
+
+.basket__content {
+	flex: 0 1 100%;
+	padding: convertToRem(60) convertToRem(50);
+}
+
+.basket__info {
+	min-width: convertToRem(410);
+	border-left: 1px solid $border-color;
+
+	@include max-screen($lg) {
+		display: none;
+	}
+}
+
+.basket__stepper {
+	padding-left: convertToRem(30);
+	padding-right: convertToRem(30);
+}
+
+.basket__card {
+	padding-left: convertToRem(30);
+	padding-top: convertToRem(60);
+
+	@include min-screen($xl) {
+		padding-left: calc(19.5% + convertToRem(30));
+	}
+}
+
+.basket__row {
+	display: flex;
+	column-gap: convertToRem(10);
+}
+
+.basket__title {
+	@include item-title;
+	margin-bottom: convertToRem(35);
+}
+
+.basket__block {
+	padding: convertToRem(38);
+
+	&:not(:last-child) {
+		border-bottom: 1px solid $border-color;
+	}
+}
+
+.basket__item {
+	margin-top: convertToRem(35);
+}
+
+.card-box {
+	width: convertToRem(630);
+}
+
+.card-box__item {
+	margin-top: convertToRem(38);
+	display: flex;
+	flex-wrap: wrap;
+
+	&--card {
+		margin-left: convertToRem(-30);
+	}
+}
+
+.card-box__radio {
+	margin-right: convertToRem(85);
+}
+
+.card-box__checkbox {
+	display: block;
+	width: 100%;
+	margin-bottom: convertToRem(14);
+}
+
+.card-box__footer {
+	margin-top: convertToRem(25);
+	display: flex;
+	justify-content: space-between;
+}

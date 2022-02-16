@@ -1,0 +1,25 @@
+.icon-link {
+	@include size(convertToRem(30), convertToRem(30));
+	position: relative;
+	padding: 5px 0 1px;
+}
+
+.icon-link__svg {
+	width: 100%;
+	max-height: 100%;
+}
+
+.icon-link__badge {
+	@include br(50%);
+	@include size(convertToRem(13));
+	position: absolute;
+	background-color: $accent-color;
+	color: $inverse-color;
+	font-size: convertToRem(10);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: initial;
+	top: 0;
+	right: 0;
+}

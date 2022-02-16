@@ -1,0 +1,29 @@
+.field {
+	&--full {
+		width: 100%;
+	}
+}
+
+.field__lbl {
+	display: block;
+	font-weight: 500;
+	color: $field-lbl-color;
+	line-height: convertToRem(24);
+	font-size: convertToRem(12);
+}
+
+.field__input {
+	@include br(3px);
+	border: 1px solid $field-bg-color;
+	background-color: $field-bg-color;
+	color: $field-color;
+	height: convertToRem(40);
+	line-height: convertToRem(40);
+	padding-left: convertToRem(10);
+	padding-right: convertToRem(10);
+	width: 100%;
+
+	&::placeholder {
+		color: $field-color;
+	}
+}

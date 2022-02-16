@@ -1,0 +1,30 @@
+{% macro basketItem(props) %}
+    <div class="basket-item js-basket-item  {% if props.className %} {{ props.className }}{% endif %}">
+        <img class="basket-item__img" src="{{ props.img }}"
+             alt="{{ props.name }}">
+        <div class="basket-item__info">
+            <h4 class="basket-item__name">{{ props.name }}</h4>
+            <div class="basket-item__count">
+                <div class="count">
+                    <button class="count__btn js-count-btn" data-type="decrease" type="button" title="Decrease">
+                        <svg class="count__icon">
+                            <use xlink:href="#icon-minus" />
+                        </svg>
+                    </button>
+                    <input class="count__input js-count-input" pattern=" 0+\.[0-9]*[1-9][0-9]*$" type="number" value="{{ props.count }}">
+                    <button class="count__btn js-count-btn" data-type="increase" type="button" title="Increase">
+                        <svg class="count__icon">
+                            <use xlink:href="#icon-plus" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="basket-item__price" data-price="{{ props.price }}">$ {{ props.count * props.price }}</div>
+            </div>
+        </div>
+        <button class="basket-item__delete js-delete" type="button" title="Delete">
+            <svg>
+                <use xlink:href="#icon-cross" />
+            </svg>
+        </button>
+    </div>
+{% endmacro %}

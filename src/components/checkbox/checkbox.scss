@@ -1,0 +1,34 @@
+.checkbox {
+}
+
+.checkbox__input {
+	@include size(convertToRem(18));
+	border: 1px solid $stepper-color;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	&::before {
+		@include size(convertToRem(8));
+		background-color: $accent-color;
+		content: '';
+		display: block;
+		transform: scale(0);
+		transition: transform $default-transition-duration $default-transition-function;
+	}
+
+	:checked + &::before {
+		transform: scale(1);
+	}
+}
+
+.checkbox__lbl {
+	margin-left: convertToRem(6);
+	vertical-align: middle;
+	color: $secondary-color;
+
+	a {
+		color: $primary-color;
+		text-decoration: none;
+	}
+}

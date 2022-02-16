@@ -1,0 +1,15 @@
+{% macro stepper(props) %}
+    <div class="stepper{% if props.className %} {{ props.className }}{% endif %}">
+        {% for item in stepperItems %}
+            <div class="stepper__item
+            {% if loop.index === 1 %} stepper__item--done{% endif %}
+            {% if loop.index === 2 %} stepper__item--done{% endif %}
+            {% if loop.index === 3 %} stepper__item--active{% endif %}"
+                 data-ind="{{ item.id }}" data-lbl="{{ item.title }}">
+            </div>
+            {% if loop.index !== loop.length %}
+                <div class="stepper__divider"></div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endmacro %}

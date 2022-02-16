@@ -1,0 +1,31 @@
+<header class="header">
+    <div class="header__inner container">
+        <a href="/" class="header__logo">
+            <img src="assets/images/logo.svg" alt="SP.shop">
+        </a>
+        {{ menu({
+            className: "header__nav"
+        }) }}
+        {{ iconLink({
+            link: '#',
+            className: "header__link",
+            iconName: 'search',
+            hasBadge: false,
+            badgeNum: '0'
+        }) }}
+        {{ iconLink({
+            link: '#',
+            className: "header__link",
+            iconName: 'basket',
+            hasBadge: true,
+            badgeNum: '3'
+        }) }}
+        {{ iconLink({
+            link: '#',
+            className: "header__link hide-on-desktop",
+            iconName: 'burger',
+            hasBadge: false,
+            badgeNum: '0'
+        }) }}
+    </div>
+</header>

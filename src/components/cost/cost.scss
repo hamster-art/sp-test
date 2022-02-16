@@ -1,0 +1,13 @@
+.cost {
+}
+
+.cost__row {
+	display: flex;
+	justify-content: space-between;
+	line-height: convertToRem(34);
+
+	&--total {
+		font-weight: 700;
+		font-size: convertToRem(18);
+	}
+}

@@ -1,0 +1,44 @@
+<div class="card">
+    {{ field({
+        lbl: 'Name on card',
+        type: 'text',
+        placeholder: 'Placeholder Text',
+        className: 'card__item field--full'
+    }) }}
+    {{ field({
+        lbl: 'Card number',
+        type: 'text',
+        placeholder: '',
+        className: 'card__item'
+    }) }}
+    {{ field({
+        lbl: '',
+        type: 'text',
+        placeholder: '',
+        className: 'card__item'
+    }) }}
+    {{ field({
+        lbl: '',
+        type: 'text',
+        placeholder: '',
+        className: 'card__item'
+    }) }}
+    {{ field({
+        lbl: '',
+        type: 'text',
+        placeholder: '',
+        className: 'card__item'
+    }) }}
+    {{ field({
+        lbl: 'Expire date',
+        type: 'text',
+        placeholder: '',
+        className: 'card__item'
+    }) }}
+    {{ field({
+        lbl: 'CVV code',
+        type: 'text',
+        placeholder: '',
+        className: 'card__item'
+    }) }}
+</div>

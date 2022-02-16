@@ -1,0 +1,5 @@
+{% macro button(props) %}
+    <button class="button{% if props.className %} {{ props.className }}{% endif %}" type="button" title="{{ props.children }}">
+        {{ props.children }}
+    </button>
+{% endmacro %}

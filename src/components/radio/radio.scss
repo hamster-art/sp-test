@@ -1,0 +1,29 @@
+.radio {
+}
+
+.radio__input {
+	@include size(convertToRem(18));
+	@include br(50%);
+	border: 1px solid $stepper-color;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	&::before {
+		@include size(convertToRem(8));
+		@include br(50%);
+		background-color: $accent-color;
+		content: '';
+		display: block;
+		transform: scale(0);
+		transition: transform $default-transition-duration $default-transition-function;
+	}
+
+	:checked + &::before {
+		transform: scale(1);
+	}
+}
+
+.radio__lbl {
+	margin-left: convertToRem(6);
+}

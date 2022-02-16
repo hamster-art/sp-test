@@ -1,0 +1,56 @@
+{
+	"menuItems": [
+		{
+			"name": "Women’s",
+			"path": "#"
+		},
+		{
+			"name": "Men’s",
+			"path": "#"
+		},
+		{
+			"name": "Home",
+			"path": "#"
+		},
+		{
+			"name": "Travel",
+			"path": "#"
+		},
+		{
+			"name": "Beauty",
+			"path": "#"
+		},
+		{
+			"name": "Sale",
+			"path": "#"
+		}
+	],
+	"stepperItems": [
+		{
+			"title": "Account",
+			"id": 1
+		},
+		{
+			"title": "Shipping",
+			"id": 2
+		},
+		{
+			"title": "Billing",
+			"id": 3
+		},
+		{
+			"title": "Review",
+			"id": 4
+		}
+	],
+	"someData": [
+		{
+			"title": "Billing",
+			"text": "Billing"
+		},
+		{
+			"title": "Review",
+			"text": "Review"
+		}
+	]
+}

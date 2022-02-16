@@ -1,0 +1,18 @@
+.card {
+	background: $bg-color;
+	border: 1px solid $border-color;
+	box-sizing: border-box;
+	box-shadow: 0 0 convertToRem(32) rgba(0, 0, 0, 0.19);
+	border-radius: 5px;
+	padding: convertToRem(20) convertToRem(30) convertToRem(26);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	column-gap: convertToRem(30);
+	width: convertToRem(550);
+}
+
+.card__item {
+	width: calc((100% - convertToRem(30) * 3) / 4);
+	margin-bottom: convertToRem(20);
+}

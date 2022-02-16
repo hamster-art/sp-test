@@ -1,0 +1,122 @@
+{% extends "../ext/base.nunj" %}
+
+{% from "../../components/menu/menu.nunj" import menu %}
+{% from "../../components/button/button.nunj" import button %}
+{% from "../../components/icon-link/icon-link.nunj" import iconLink %}
+{% from "../../components/icon/icon.nunj" import icon %}
+{% from "../../components/field/field.nunj" import field %}
+{% from "../../components/checkbox/checkbox.nunj" import checkbox %}
+{% from "../../components/radio/radio.nunj" import radio %}
+{% from "../../components/basket-item/basket-item.nunj" import basketItem %}
+{% from "../../components/stepper/stepper.nunj" import stepper %}
+{% from "../../components/cost/cost.nunj" import cost %}
+
+{# Пример расширения существующего блока #}
+{# Например можно использовать для добавления уникальных тайтлов для каждой страницы #}
+{# {% block title %}Home / {{ super() }}{% endblock title %} #}
+
+{% block content %}
+
+    {% include '../../components/header/header.nunj' %}
+
+    <main class="main">
+        <div class="basket">
+            <div class="basket__content ">
+
+                {{ stepper({
+                    className: 'basket__stepper'
+                }) }}
+                <div class="basket__card">
+                    <h3 class="basket__title">Billing Information</h3>
+                    <div class="card-box">
+                        <div class="card-box__item">
+                            {{ radio({
+                                id: 'credit-card',
+                                name: 'payment-type',
+                                checked: true,
+                                className: 'card-box__radio',
+                                lbl: 'Pay with Credit Card',
+                                img: '',
+                                alt: ''
+                            }) }}
+                            {{ radio({
+                                id: 'paypal',
+                                name: 'payment-type',
+                                checked: false,
+                                className: 'card-box__radio',
+                                lbl: '',
+                                img: './assets/images/paypal.svg',
+                                alt: 'Pay with PayPal'
+                            }) }}
+                        </div>
+                        <div class="card-box__item card-box__item--card">
+                            {% include '../../components/card/card.nunj' %}
+                        </div>
+                        <div class="card-box__item">
+                            {{ checkbox({
+                                id: 'save-info',
+                                checked: true,
+                                className: 'card-box__checkbox',
+                                lbl: 'Save information of this credit card'
+                            }) }}
+                            {{ checkbox({
+                                id: 'terms',
+                                checked: false,
+                                className: 'card-box__checkbox',
+                                lbl: 'I accept the <a href="">terms and comditions</a> and the <a href="">Privacy Policies</a>'
+                            }) }}
+                        </div>
+                        <div class="card-box__footer">
+                            {{ button({
+                                className: 'button--secondary',
+                                children: 'Back'
+                            }) }}
+                            {{ button({
+                                className: 'button--primary',
+                                children: 'Check Out'
+                            }) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="basket__info">
+                <div class="basket__block">
+                    <h3 class="basket__title">My basket</h3>
+                    <p class="js-empty-message" hidden>Empty basket...</p>
+                    {{ basketItem({
+                        className: 'basket__item',
+                        img: './assets/images/tshirt.png',
+                        name: 'Amet minim mollit non deserunt ullamco est sit',
+                        count: 1,
+                        price: 525
+                    }) }}
+                    {{ basketItem({
+                        className: 'basket__item',
+                        img: './assets/images/boot.png',
+                        name: 'Amet minim mollit non',
+                        count: 1,
+                        price: 525
+                    }) }}
+                </div>
+                <div class="basket__block">
+                    <h3 class="basket__title">Promo code</h3>
+                    <div class="basket__row">
+                        {{ field({
+                            lbl: '',
+                            type: 'text',
+                            placeholder: 'Placeholder Text',
+                            className: 'field--full'
+                        }) }}
+                        {{ button({
+                            className: 'button--primary',
+                            children: 'Apply'
+                        }) }}
+                    </div>
+                </div>
+                {{ cost({
+                    className: 'basket__block'
+                }) }}
+            </div>
+        </div>
+    </main>
+{% endblock content %}

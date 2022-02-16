@@ -1,0 +1,28 @@
+.header {
+	padding-top: convertToRem(26);
+	padding-bottom: convertToRem(23);
+	border-bottom: 1px solid $border-color;
+}
+
+.header__inner {
+	display: flex;
+	align-items: center;
+}
+
+.header__logo {
+	margin-right: auto;
+}
+
+.header__nav {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+
+	@include max-screen($md) {
+		display: none;
+	}
+}
+
+.header__link {
+	margin-left: convertToRem(26);
+}

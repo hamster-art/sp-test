@@ -1,0 +1,20 @@
+{% macro cost(props) %}
+    <div class="cost{% if props.className %} {{ props.className }}{% endif %}">
+        <div class="cost__row">
+            <div>Subcost</div>
+            <div class="js-subcost"></div>
+        </div>
+        <div class="cost__row">
+            <div>Tax</div>
+            <div data-tax="100">$ 100</div>
+        </div>
+        <div class="cost__row">
+            <div>Shipping</div>
+            <div data-shipping="150">$ 150</div>
+        </div>
+        <div class="cost__row cost__row--total">
+            <div>Total</div>
+            <div class="js-total"></div>
+        </div>
+    </div>
+{% endmacro %}

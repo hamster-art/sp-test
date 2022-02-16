@@ -1,0 +1,50 @@
+.stepper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: convertToRem(24);
+}
+
+.stepper__item {
+	position: relative;
+	text-align: center;
+
+	&::before {
+		@include size(convertToRem(18));
+		@include br(50%);
+		content: attr(data-ind);
+		font-weight: 500;
+		border: 1px solid $stepper-color;
+		color: $stepper-color;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		line-height: initial;
+		font-size: convertToRem(10);
+	}
+
+	&--active::before {
+		border-color: $accent-color;
+		color: $primary-color;
+	}
+
+	&--done::before {
+		background-color: $accent-color;
+		border-color: $accent-color;
+		color: $inverse-color;
+	}
+
+	&::after {
+		content: attr(data-lbl);
+		position: absolute;
+		top: convertToRem(27);
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.stepper__divider {
+	height: 1px;
+	background-color: $stepper-color;
+	width: calc((100% - convertToRem(18) * 4) / 3);
+}
